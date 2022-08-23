@@ -1,0 +1,132 @@
+﻿@model EntityLayerr.Concerete.Comments
+@{
+    ViewBag.Title = "Burgerİnformation";
+    Layout = "~/Views/Shared/Burger_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Tasty Burger Restaurants Category Bootstrap Responsive Web Template | Single Page :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords"
+          content="Tasty Burger Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!--// Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Bootstrap-Core-CSS -->
+    <link href="css/single.css" rel='stylesheet' type='text/css' />
+    <!-- single page -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <!-- //Web-Fonts -->
+</head>
+
+<body>
+
+    <div class="main-banner-2">
+
+    </div>
+    <!-- //banner -->
+    <!-- page details -->
+    <div class="breadcrumb-agile bg-light py-2">
+        <ol class="breadcrumb bg-light m-0">
+            <li class="breadcrumb-item">
+                <a href="/Burger/Index">Anasayfa</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Burger Detay</li>
+        </ol>
+    </div>
+    <!-- //page details -->
+    <!-- single page -->
+
+    <div class="single-page py-5">
+      
+            <div class="container py-xl-5 py-lg-3">
+                <div class="title-section text-center mb-md-5 mb-4">
+                    <h3 class="w3ls-title">Burger <span>Detay   </span></h3>
+                </div>
+                <div class="inner-sec">
+                    <div class="row">
+                        <!-- left side -->
+                       
+                        <div class="col-lg-8 left-blog-info text-left">
+                            <div class="blog-grid-top">
+                                @foreach (var x in Model.Deger2)
+                                {
+                                    <div class="b-grid-top">
+
+                                        <div class="blog_info_left_grid">
+                                            <a href="/Burger/Burgerİnformation/@x.BURGERİD">
+                                                <img src="@x.BurgerImage" class="img-fluid" alt="" width="600" height="400">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <h3>
+                                        <a href="single.html" class="single-text text-da font-weight-light">
+                                            Burgerimizin Fiyatı:@x.BurgerPrice
+                                        </a>
+                                    </h3>
+                                    <p>
+                                        BURGER TARİFİ
+                                    </p>
+                                    <div class="mt-sm-4 mt-3">
+                                        <p>
+                                            @x.BurgerSpecification
+                                        </p>
+                                    </div>
+                                    <br />
+
+
+                                }
+                                <div class="comment-top">
+                                    <h4>Yorumlar</h4>
+                                    @foreach (var x in Model.Deger1)
+                                    {
+                                    <div class="media">
+                                        <img src="~/burgersitesi/web/images/avatar.pnp.png"height="70" width="70" alt="" class="img-fluid" />
+                                        <div class="media-body">
+                                            <h5 class="mt-0">@x.CommentName</h5>
+                                            <p>
+                                            Konu:@x.CommentSubject
+                                            </p>
+                                            <p>
+                                                @x.CommentMessage
+                                            </p>
+                                        </div>
+                                    </div>
+                                    }
+                                </div>
+                                <br />
+                                @Html.Action("BurgerComment", "Burger")
+                            </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        
+        </div>
+      
+    </body>
+</html>

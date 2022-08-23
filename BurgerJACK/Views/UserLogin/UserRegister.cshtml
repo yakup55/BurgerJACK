@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "UserRegister";
+    Layout = "~/Views/Shared/Burger_Layout.cshtml";
+}
+<div class="main-banner-2">
+
+</div>
+<!-- //banner -->
+<!-- page details -->
+<div class="breadcrumb-agile bg-light py-2">
+    <ol class="breadcrumb bg-light m-0">
+        <li class="breadcrumb-item">
+            <a href="/Burger/Index">Anasayfa</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Kayıt Ol</li>
+    </ol>
+</div>
+<!-- //page details -->
+<!-- login -->
+<div class="login-contect py-5">
+    <div class="container py-xl-5 py-3">
+        <div class="login-body">
+            <div class="login p-4 mx-auto">
+                <h5 class="text-center mb-4">Aramıza Katıl</h5>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label>Email Adresiniz</label>
+                        <input type="email" class="form-control" name="Mail" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Şifreniz</label>
+                        <input type="password" class="form-control" name="Password" id="password1" placeholder=""
+                               required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Şifre Tekrar</label>
+                        <input type="password" class="form-control" name="PasswordAgain" id="password1" placeholder=""
+                               required="">
+                    </div>
+                    <button type="submit" class="btn submit mb-4">Kayıt Ol</button>
+                    <p class="text-center">
+                        <a href="#" class="text-da">By clicking Register, I agree to your terms</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //login -->

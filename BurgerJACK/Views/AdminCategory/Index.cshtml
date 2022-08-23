@@ -1,0 +1,28 @@
+﻿@using EntityLayerr.Concerete
+@model List<Category>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/BurgerWriter_Loyout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>KATEGORİ ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>BAŞLIKLAR</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <th>@x.CategoryID</th>
+            <th>@x.CategoryName</th>
+            <th><a href="/AdminCategory/CategoryDelete/@x.CategoryID" class="btn btn-outline-danger">SİL</a> </th>
+            <th><a href="/AdminCategory/CategoryUpdate/@x.CategoryID" class="btn btn-outline-success">GÜNCELLE</a> </th>
+            <th><a href="#" class="btn btn-outline-primary">BAŞLIKLAR</a> </th>
+        </tr>
+    }
+</table>
+<a href="/AdminCategory/CategoryAdd" class="btn btn-outline-primary">Yeni Kategori</a>

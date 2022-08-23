@@ -1,0 +1,21 @@
+﻿@model EntityLayerr.Concerete.Category
+@{
+    ViewBag.Title = "CategoryUpdate";
+    Layout = "~/Views/Shared/BurgerWriter_Loyout.cshtml";
+}
+<h2>Kategori Güncelle</h2>
+
+@using (Html.BeginForm("CategoryUpdate", "AdminCategory", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x=>x.CategoryID)
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+        @Html.Label("Kategori Açıklama")
+        @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" })
+        <button class="btn btn-outline-success">Güncelle</button>
+    </div>
+
+
+}
+

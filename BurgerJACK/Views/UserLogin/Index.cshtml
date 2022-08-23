@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Burger_Layout.cshtml";
+}
+<!-- banner -->
+<div class="main-banner-2">
+
+</div>
+<!-- //banner -->
+<!-- page details -->
+<div class="breadcrumb-agile bg-light py-2">
+    <ol class="breadcrumb bg-light m-0">
+        <li class="breadcrumb-item">
+            <a href="/Burger/Index">Anasayfa</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Giriş Yap</li>
+    </ol>
+</div>
+<!-- //page details -->
+<!-- login -->
+<div class="login-contect py-5">
+    <div class="container py-xl-5 py-3">
+        <div class="login-body">
+            <div class="login p-4 mx-auto">
+                <h5 class="text-center mb-4">Giriş Yap</h5>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label>Email Adresiniz</label>
+                        <input type="text" class="form-control" name="Mail" placeholder="" required="">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-2">Şifreniz</label>
+                        <input type="password" class="form-control" name="Password" placeholder="" required="">
+                    </div>
+                    <button type="submit" class="btn submit mb-4">Giriş Yap</button>
+                    <p class="forgot-w3ls text-center mb-3">
+                        <a href="#" class="text-da">Şifreni mi unuttun?</a>
+                    </p>
+                    <p class="account-w3ls text-center text-da">
+                        Hesabın Yok mu?
+                        <a href="/UserLogin/UserRegister">Kayıt Ol</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //login -->

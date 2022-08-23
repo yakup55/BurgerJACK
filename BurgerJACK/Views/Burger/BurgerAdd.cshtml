@@ -1,0 +1,30 @@
+﻿@model EntityLayerr.Concerete.Burger
+@{
+    ViewBag.Title = "BurgerAdd";
+    Layout = "~/Views/Shared/Burger_Layout.cshtml";
+}
+
+<h2>Burger Ekle</h2>
+@using (Html.BeginForm("BurgerAdd", "Burger", FormMethod.Post)) { 
+    <div class="form-group">
+        @Html.Label("Burger Adı")
+        @Html.TextBoxFor(x => x.BurgerName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.BurgerName)
+        <br />
+        @Html.Label("Resim Uzantısı")
+        @Html.TextAreaFor(x => x.BurgerImage, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.BurgerImage)
+       
+        <br />
+        @Html.Label("Burger Fiyat")
+        @Html.TextBoxFor(x => x.BurgerPrice, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.BurgerPrice)
+        <br />
+        @Html.Label("Burger Tarifi")
+        @Html.TextAreaFor(x => x.BurgerSpecification, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.BurgerSpecification)
+        <br />
+        <button class="btn btn-primary">Ekle</button>
+    </div>
+}
+
